@@ -96,6 +96,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
+  Vragen:
+  Is mijn html correct? (structuur)
+  zijn  er fouten in de code tezien?
+  Zijn de animaties mogenlijk met css of moet het met javascript?
+
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |

@@ -6,6 +6,10 @@
   overflow-x: hidden;
 }
 
+button:not(disabled) {
+	cursor:pointer;
+}
+
 
 
 
@@ -18,34 +22,6 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-}
-
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* scroll naar beneden om de uitwerking te bekijken */
-
-/* Simpele CSS Remedy */
-/* naar een idee van Jen Simmons */
-/* https://github.com/jensimmons/cssremedy */
-*, *::after, *::before {
-	box-sizing:border-box;  
-  }
-  
-  button:not(disabled) {
-	cursor:pointer;
-  }
-  
-  
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
 	--general-color:#012;
 	--general-background:#fff;
 	
@@ -58,7 +34,15 @@
 	--button-background:#f46;
 	
 	--title-gradient:linear-gradient(#f46 40%, #f8a 80%);
-  }
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
   
   /*************/
   /* DE HEADER */
@@ -86,10 +70,6 @@
 	color:var(--general-color);
 	text-decoration:none;
   }
-  
-  
-  
-  
   
   /********/
   /* LOGO */
