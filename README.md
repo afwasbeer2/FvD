@@ -100,6 +100,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Is mijn html correct? (structuur)
   zijn  er fouten in de code tezien?
   Zijn de animaties mogenlijk met css of moet het met javascript?
+  Zijn er suggesties voor verbeteringen?
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
