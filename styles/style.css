@@ -3,6 +3,7 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  overflow-x: hidden;
 }
 
 
@@ -48,7 +49,7 @@
 	--general-color:#012;
 	--general-background:#fff;
 	
-	--header-gradient:linear-gradient(#f8a, #fbd);
+	--header-gradient:#0083ca;;
 	
 	--menu-gradient:linear-gradient(#8af, #bdf);
 	--menu-border:#46f;
@@ -59,34 +60,13 @@
 	--title-gradient:linear-gradient(#f46 40%, #f8a 80%);
   }
   
-  
-  
-  
-  
-  /********************/
-  /* ALGEMENE STIJLEN */
-  /********************/
-  body {
-	margin:0;
-	background-color:var(--general-background);
-	color:var(--general-color);
-  }
-  
-  
-  
-  
-  
-  /******************************************************/
-  /* styling voor de small-screen versie van de website */
-  /******************************************************/
-  
   /*************/
   /* DE HEADER */
   /*************/
   header {
 	min-height:4em;
 	padding:0 1em;
-	background-image:var(--header-gradient);
+	background-color:var(--header-gradient);
 	line-height:1;
 	
 	/* JOUW CODE HIER - stap 3 */  
@@ -344,33 +324,5 @@
 	  
 	  
 	}
-  }
-  
-  
-  
-  
-  
-  /***********/
-  /* CONTENT */
-  /***********/
-  
-  main h1,
-  main p {
-	max-width:40rem;
-	margin:0 auto;
-	line-height:1.75;
-  }
-  
-  main h1 {
-	padding:5vw 2.5vw 0;
-	
-	background-image:var(--title-gradient);
-	-webkit-background-clip:text;
-	background-clip:text;
-	color:transparent;
-  }
-  
-  main p {
-	padding:0 2.5vw 2.5vw;
   }
 
