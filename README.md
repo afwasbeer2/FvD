@@ -113,10 +113,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - De eerste vraag ging over grid. Best handig ook voor mijn website. Sanne heeft uitgeled over hoe je in een grid je website kan positioneren. Hierbij heeft die uitlegend over en grid template en hoe je zo door bijvoorbeeld een onderdeel met plaatjes te maken hoe je meerdere plaatjes in de zelfde grid vlak kan krijgen en dan met justify-self en translate kan positioneren. Dit kan je het beste doen met % want dan blijft die responsive.
+  - SVG is handig omdat je die kan aanpassen in de CSS de SVG moet dan wel in de html staan met een PATH.
+  - SVG logo aanpassen en daar de onnodige classes uithalen en de css in de css bestand doen. ID per path is goedgekeurd.
+  - in de sections moeten de H2 boven de images komen
+  - de SVG logo moet de h1 worden en in een A veranderen zodat die klikbaar is.
+  - UL en LI in de footer aanpassen naar sections met H2 en P
+  
 
 </details>
 
