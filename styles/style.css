@@ -3,12 +3,11 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 body {
-	background-color: #f8a;
+	overflow-x: hidden;
 }
 
 /*********************/
@@ -21,6 +20,8 @@ body {
 	--color-background:#eee;
 	--general-color:#012;
 	--general-background:#fff;
+	--background-color-1:#5ba7dc;
+	--background-color-2:#aa258d;
 	
 	--header-background:#0083ca;
 	--color-white:#fff;
@@ -36,20 +37,31 @@ body {
     font-style: normal;
 }
 
-
-
+  /*************/
+  /* DE HEADER */
+  /*************/
+  header section:nth-of-type(2) {
+    height: 6em;
+    padding: 0 1em;
+    background-color: var(--header-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Verdeel de ruimte tussen de items */
+}
+  
+  
 /****************/
 /* JOUW STYLING */
 /****************/
   
-section:first-of-type {
+header section:nth-of-type(1) {
 	background-color: var(--color-purple);
 	height: 4em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
  }
-section p {
+header section p {
 	color: var(--color-white);
 	font-family: 'Monsterrat', sans-serif;
 	font-size: 1.3em;
@@ -57,22 +69,7 @@ section p {
 	width: 80%;
 
 }
-  /*************/
-  /* DE HEADER */
-  /*************/
-  header {
-	height:6em;
-	padding:0 1em;
-	background-color:var(--header-background);
-	line-height:1;  
-  	display:flex;
-	justify-content: space-around;
-	align-items: center;
-	top:0;
-	
-  }
-  
-  
+
   /********/
   /* winkelmandje */
   /********/
@@ -160,17 +157,17 @@ header a:nth-of-type(2) svg path {
     
     /* JOUW CODE HIER - stap 4 */
     transition: 0.3s;
+
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
 }
 
 /* als menu open is */
 nav.toonMenu ul {
     /* JOUW CODE HIER - stap 4 */
     translate: 0%;
-
-	display: flex;
-	flex-direction: column;
-
-	height: 100%;
 }
   
   nav li {
@@ -190,66 +187,64 @@ nav.toonMenu ul {
 	color: var(--color-text-nav);
   }
 
-  /****************************************************************/
-  /* styling voor de header als de browser minimaal 38em breed is */
-  /****************************************************************/
-  @media (min-width:38em) {
-	nav {
-	  /* JOUW CODE HIER - stap 8 */
-  order:0;
-	  
-	}
-	
-	nav button {
-	  /* JOUW CODE HIER - stap 6 */
-  display:none;
-	  
-	}
-	
-	nav ul {
-	  /* JOUW CODE HIER - stap 7 */
-  position:static;
-	  translate:none;
-	  background: none;
-	  padding:0;
-	}
-	
-	nav li {
-	  /* JOUW CODE HIER - stap 9 */
-	  flex-basis:0;
-	  flex-grow:0;
-  
-	  
-	}
-	
-	nav a {
-	  /* JOUW CODE HIER - stap 10 */
-   flex-direction:column;
-	  border: none;
-	  
-	}
-	
-	header > a:last-of-type {
-	  /* JOUW CODE HIER - stap 10 */
-  flex-direction:column;
-	  
-	}
-  }
-  
-  
-  
-  
   
   /****************************************************************/
-  /* styling voor de header als de browser minimaal 57em breed is */
+  /* styling voor de header als de browser minimaal 50em breed is */
   /****************************************************************/
-  @media (min-width:54em) {
-	header > a:last-of-type,
-	nav a {
-	  /* JOUW CODE HIER - stap 11 */
-	  flex-direction:row;
-	  
-	  
+@media (min-width: 55em) {
+    header section:nth-of-type(2) {
+		height: 4em; /* Verlaag de hoogte van de header */
+		padding: 0 1em;
+		background-color: var(--header-background); /* Je huidige header background */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;  /* Zorg dat de ruimte goed verdeeld blijft */
+    }
+
+    /* Verander de volgorde van de items */
+    header a:first-of-type {
+        order: 1; /* Plaats de afbeelding (logo) als eerste, dus links */
+    }
+
+    nav {
+        order: 2; /* Plaats de navigatie in het midden */
+    }
+
+    header a:last-of-type {
+        order: 3; /* Plaats de svg (winkelmandje) helemaal rechts */
+    }
+
+    /* Zorg ervoor dat de navigatie zichtbaar is en horizontaal uitlijnt */
+    nav ul {
+        translate: 0%; /* Navigatie zichtbaar maken */
+        position: relative; /* Geen absolute positionering meer */
+        display: flex; /* Terug naar horizontale layout */
+        flex-direction: row; /* Horizontale richting voor de links */
+        justify-content: space-around; /* Links gelijkmatig verdelen */
+        gap: 1em; /* Ruimte tussen de items */
+        height: auto; /* Hoogte aanpassen naar inhoud */
+        top: auto; /* Reset de top-waarde */
+		background-color: transparent;
+    }
+
+	nav a{
+		color: var(--color-white);
+		font-size: 1.5em;
 	}
-  }
+
+    /* Verberg het hamburger-menu op grotere schermen */
+    nav button {
+        display: none;
+    }
+
+	header a:first-of-type img {
+		height: 5em; /* Maak de afbeelding groter zodat deze uitsteekt */
+		margin-top: 5em; /* Gebruik een negatieve marge om de afbeelding omhoog te duwen */
+		position: relative;
+		z-index: 100000; /* Zorg dat de afbeelding boven de header blijft */
+	}
+
+}
+
 
