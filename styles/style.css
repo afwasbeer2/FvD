@@ -1,11 +1,14 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-  margin: 0;
-  padding: 0;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
 body {
 	overflow-x: hidden;
 }
@@ -14,68 +17,66 @@ body {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-text-nav:#333333;
-	--color-background:#eee;
-	--general-color:#012;
-	--general-background:#fff;
-	--background-color-1:#5ba7dc;
-	--background-color-2:#aa258d;
-	--outline-header-color:#006ab6;
-	
-	--header-background:#0083ca;
-	--color-white:#fff;
+	--color-text: #111;
+	--color-text-nav: #333333;
+	--background-color-1: #5ba7dc;
+	--background-color-2: #aa258d;
+	--outline-header-color: #006ab6;
+	--button-color: #f12a37;
+
+	--header-background: #0083ca;
+	--color-white: #fff;
 	--color-purple: #50037f;
-	
-	--title-gradient:linear-gradient(#f46 40%, #f8a 80%);
+
+}
+
+/* fonts */
+
+@font-face {
+	font-family: 'Monsterrat';
+	src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Monsterrat';
-    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal;
+	font-family: 'omnes';
+	src: url('fonts/Omnes.woff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'omnes';
-    src: url('fonts/Omnes.woff') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal;
+	font-family: 'mont';
+	src: url('fonts/mont.woff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
-@font-face {
-    font-family: 'mont';
-    src: url('fonts/mont.woff') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal;
+/* DE HEADER */
+
+header section:nth-of-type(2) {
+	height: 6em;
+	padding: 0 1em;
+	background-color: var(--header-background);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* Verdeel de ruimte tussen de items */
 }
 
-  /*************/
-  /* DE HEADER */
-  /*************/
-  header section:nth-of-type(2) {
-    height: 6em;
-    padding: 0 1em;
-    background-color: var(--header-background);
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Verdeel de ruimte tussen de items */
-}
-  
-  
-/****************/
-/* JOUW STYLING */
-/****************/
-  
+
+
+/* section boven header */
+
 header section:nth-of-type(1) {
 	background-color: var(--color-purple);
 	height: 4em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
- }
+}
+
 header section p {
 	color: var(--color-white);
 	font-family: 'Monsterrat', sans-serif;
@@ -85,93 +86,97 @@ header section p {
 
 }
 
-  /********/
-  /* winkelmandje */
-  /********/
+/* winkelmandje */
 
-  header a:nth-of-type(2) svg {
-    height: 5em; /* Verhoogde hoogte */
-    width: 5em;  /* Verhoogde breedte */
+header a:nth-of-type(2) svg {
+	height: 2.5em;
+	width: 2.5em;
 }
 
 header a:nth-of-type(2) svg path {
-    fill-rule: evenodd;
-    fill: var(--color-white);
-    stroke: var(--color-white);
-    stroke-width: 1;
+	fill-rule: evenodd;
+	fill: var(--color-white);
+	stroke: var(--color-white);
+	stroke-width: 1;
 }
 
-  
-  
-  /**********/
-  /* logo */
-  /**********/
+/* login */
 
-  header img {
-	height:3em;
-  }
+header a:nth-of-type(3) svg {
+	height: 5em;
+	width: 5em;
+}
+
+header a:nth-of-type(3) svg path {
+	fill-rule: evenodd;
+	fill: var(--color-white);
+	stroke: var(--color-white);
+	stroke-width: 1;
+}
 
 
-  /***************/
-  /* hambruger menu */
-  /***************/
-  nav button {
-	padding:.5em;
-	
-	/* icon en tekst met gap-je naast elkaar */
-	display:flex;
+
+/* logo */
+
+header img {
+	height: 3em;
+}
+
+
+
+/* hambruger menu */
+
+nav button {
+	padding: .5em;
+
+	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	
-	/* standaard styling aanpassen */
-	appearance:none;
+	appearance: none;
 	background-color: transparent;
-	border:none;
-	border-radius:.25em; 
-	font:inherit;
-	text-align:center;
-	color:var(--color-purple);
-	
+	border: none;
+	border-radius: .25em;
+	font: inherit;
+	text-align: center;
+	color: var(--color-purple);
+
 	width: 5em;
 	height: 5em;
-	
 
-  }
 
-  nav button svg {
+}
+
+nav button svg {
 	fill: var(--color-purple);
 	width: 2em;
 	height: 2em;
 	stroke: var(--color-purple);
-    stroke-width: 1;
-  }
-  
-  /*******************/
-  /* LIJST MET LINKS */
-  /*******************/
-  nav ul { 
-    margin: 0; 
-    padding: 0; 
-    list-style: none;
+	stroke-width: 1;
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    align-content: start;
+/* nav menu */
 
-    background: var(--color-white);
-    
-    position: absolute; 
-    top: 10em; 
-    left: 0; 
-    right: 0; 
-    
-    /* JOUW CODE HIER - stap 2 */
-    translate: -100%;
-    
-    /* JOUW CODE HIER - stap 4 */
-    transition: 0.3s;
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	align-content: start;
+
+	background: var(--color-white);
+
+	position: absolute;
+	top: 10em;
+	left: 0;
+	right: 0;
+
+	translate: -100%;
+
+	transition: 0.3s;
 
 	display: flex;
 	flex-direction: column;
@@ -179,87 +184,155 @@ header a:nth-of-type(2) svg path {
 	height: 100%;
 }
 
-/* als menu open is */
 nav.toonMenu ul {
-    /* JOUW CODE HIER - stap 4 */
-    translate: 0%;
+	translate: 0%;
 }
-  
-  nav li {
-	
+
+nav li {
+
 	padding: 1.1rem 3rem;
-    text-decoration: none;
-	
-    font-size: 1em;
+	text-decoration: none;
+
+	font-size: 1em;
 	font-family: 'Monsterrat', sans-serif;
 
 	display: flex;
 	justify-content: left;
-  }
-  
-  nav a {
+}
+
+nav a {
 	text-decoration: none;
 	color: var(--color-text-nav);
-  }
+}
 
-  
-  /****************************************************************/
-  /* styling voor de header als de browser minimaal 50em breed is */
-  /****************************************************************/
+/* footer*/
+
+footer {
+	background-color: var(--color-purple);
+	display: flex;
+	flex-direction: column;
+	gap: 2em
+}
+
+/*footer section plus form*/
+
+footer section:nth-of-type(1) h2 {
+	font-size: 2.1875em;
+	font-family: 'omnes', sans-serif;
+	color: var(--color-white);
+	text-align: center;
+
+}
+
+footer section:nth-of-type(1) p {
+	order: 3;
+	font-family: 'mont', sans-serif;
+	font-size: 1.125em;
+	color: var(--color-white);
+	line-height: 1.44em;
+	text-align: center;
+}
+
+footer section:nth-of-type(1) form input {
+	font-family: 'mont', sans-serif;
+	font-size: 2em;
+	color: white;
+}
+
+footer section:nth-of-type(1) form button {
+
+	background-color: var(--button-color);
+	color: white;
+	border: none;
+	font-size: 2em;
+	font-family: 'mont', sans-serif;
+}
+
+/*footer eerste lijst*/
+footer ul:nth-of-type(1) li a svg {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+footer ul:nth-of-type(1) li a svg path {
+	fill-rule: evenodd;
+	fill: var(--color-white);
+}
+
+footer ul:nth-of-type(1) li a svg path {
+	fill-rule: evenodd;
+	fill: var(--color-white);
+}
+
+footer ul:nth-of-type(1) li a{
+	font-family: 'mont', sans-serif;
+	font-size: 1.125em;
+	color: var(--color-white);
+	line-height: 1.44em;
+	text-align: center;
+}
+
+footer ul:nth-of-type(1){
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+/* styling voor de header als de browser minimaal 50em breed is */
+
 @media (min-width: 55em) {
-    header section:nth-of-type(2) {
-		height: 4em; /* Verlaag de hoogte van de header */
+	header section:nth-of-type(2) {
+		height: 4em;
 		padding: 0 1em;
-		background-color: var(--header-background); /* Je huidige header background */
+		background-color: var(--header-background);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		position: relative;  /* Zorg dat de ruimte goed verdeeld blijft */
-    }
+		position: relative;
+	}
 
-    /* Verander de volgorde van de items */
-    header a:first-of-type {
-        order: 1; /* Plaats de afbeelding (logo) als eerste, dus links */
-    }
+	header a:first-of-type {
+		order: 1;
+	}
 
-    nav {
-        order: 2; /* Plaats de navigatie in het midden */
-    }
+	nav {
+		order: 2;
+	}
 
-    header a:last-of-type {
-        order: 3; /* Plaats de svg (winkelmandje) helemaal rechts */
-    }
+	header a:nth-of-type(2) {
+		order: 3;
+	}
 
-    /* Zorg ervoor dat de navigatie zichtbaar is en horizontaal uitlijnt */
-    nav ul {
-        translate: 0%; /* Navigatie zichtbaar maken */
-        position: relative; /* Geen absolute positionering meer */
-        display: flex; /* Terug naar horizontale layout */
-        flex-direction: row; /* Horizontale richting voor de links */
-        justify-content: space-around; /* Links gelijkmatig verdelen */
-        gap: 1em; /* Ruimte tussen de items */
-        height: auto; /* Hoogte aanpassen naar inhoud */
-        top: auto; /* Reset de top-waarde */
+	header a:last-of-type {
+		order: 4;
+	}
+
+	nav ul {
+		translate: 0%;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		gap: 1em;
+		height: auto;
+		top: auto;
 		background-color: transparent;
-    }
+	}
 
-	nav a{
+	nav a {
 		color: var(--color-white);
 		font-size: 1.5em;
 	}
 
-    /* Verberg het hamburger-menu op grotere schermen */
-    nav button {
-        display: none;
-    }
+	nav button {
+		display: none;
+	}
 
 	header a:first-of-type img {
-		height: 5em; /* Maak de afbeelding groter zodat deze uitsteekt */
-		margin-top: 5em; /* Gebruik een negatieve marge om de afbeelding omhoog te duwen */
+		height: 5em;
+		margin-top: 5em;
 		position: relative;
-		z-index: 100000; /* Zorg dat de afbeelding boven de header blijft */
+		z-index: 100000;
 	}
 
 }
-
-
