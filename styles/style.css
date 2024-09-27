@@ -22,6 +22,7 @@ body {
 	--general-background:#fff;
 	--background-color-1:#5ba7dc;
 	--background-color-2:#aa258d;
+	--outline-header-color:#006ab6;
 	
 	--header-background:#0083ca;
 	--color-white:#fff;
@@ -33,6 +34,20 @@ body {
 @font-face {
     font-family: 'Monsterrat';
     src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'omnes';
+    src: url('fonts/Omnes.woff') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url('fonts/mont.woff') format('truetype'); 
     font-weight: normal; 
     font-style: normal;
 }
