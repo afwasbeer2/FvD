@@ -154,6 +154,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - nog een punt
 - ...
 
+  vragen:
+  hoe fix ik de logo's in de header
+  hoe maak ik zoon kronkel lijn
+  hoe krijg ik die font.
+
+  de logo op de header is gefixed. Ik heb dit nu gedaan met margin 0 auto wat wel werkte. De kronkel lijn in de footer is ook gelukt ik heb hiervoor de svg moeten downloaden en dan boven aan de footer gezet met 100% waardoor die bovenaan komt te staan.
+
 </details>
 
 
@@ -195,10 +202,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | ...            | ...                | ...          | ...              |
 
 
-  vragen:
-  hoe fix ik de logo's in de header
-  hoe maak ik zoon kronkel lijn
-  hoe krijg ik die font
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

@@ -73,7 +73,7 @@ header p {
 	text-align: center;
 	width: 100%;
 	flex-basis: 100%;
-	order: -1;
+	order: -2;
 	background-color: var(--color-purple);
 	height: 3em;
 	display: flex;
@@ -114,16 +114,21 @@ header a:nth-of-type(3) svg path {
 
 /* logo */
 
-header img {
-	height: 3em;
+header a:nth-of-type(1){
 	margin: 0 auto;
-	order: 2;
 }
 
+header a:nth-of-type(1) img {
+	height: 3em;
+	
+	display: block;
+	
+}
 
 header nav {
-	order: 1;
+	order: -1;
 }
+
 /* hambruger menu */
 
 nav button {
@@ -144,6 +149,7 @@ nav button {
 	width: 5em;
 	height: 5em;
 
+	
 
 }
 
@@ -190,7 +196,7 @@ nav.toonMenu ul {
 
 nav li {
 
-	padding: 1.1rem 3rem;
+	padding: 1.1em 1em;
 	text-decoration: none;
 
 	font-size: 1em;
@@ -222,6 +228,7 @@ footer > svg {
 	left: 0;
 	right: 0;
 	height: auto;
+	fill: var(--color-purple);
 }
 /*footer section plus form*/
 
@@ -295,23 +302,17 @@ footer ul:nth-of-type(1){
 	}
 
 	header a:first-of-type {
-		order: 1;
+		order: -1;
+		margin: 0 0 0 auto;
 	}
 
 	header nav{
-		margin: 0 auto;
+		margin: 0 8em 0 2em;
+		order: 0;
 	   }
 
-	nav {
-		order: 2;
-	}
-
-	header a:nth-of-type(2) {
-		order: 3;
-	}
-
 	header a:last-of-type {
-		order: 4;
+		margin: 0 auto 0 0;
 	}
 
 	nav ul {
